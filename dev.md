@@ -25,39 +25,59 @@
 ### การดาวน์โหลดและอัพโหลดไฟล์ไปบน Github
 
 ```
-    git init
+$  git init
 ```
 
 คำสั่งนี้ เอาไว้เพือสร้าง git respository เปล่าๆ ไว้บน computer ซึ่ง folder จะถูกสร้างไว้ในโปรเจคเราโดยจะถูก hidden ไว้
 
 ```
-    git status
+$  git status
 ```
 
 คำสั่งนี้ เอาไว้เพื่อแสดงสถานะ respository ของเรา
 
 ```
-    git add file_name or git add .
+$  git add file_name or git add .
 ```
 
 คำสั่งนี้ จะเป็นการเปลี่ยนไฟล์ให้อยู่ในสถานะ Staging area ทำให้ไฟล์จะถูก track โดย Git ได้ หากใส่ . ในคำสั่งเหมือนกับในตัวอย่างจะเป็นการ tracking ไฟล์ทั้งหมด
 
 ```
-      git commit -m "YOUR MESSAGE"
+$  git commit -m "YOUR MESSAGE"
 ```
 
 คำสั่งนี้ จะเปลี่ยนไฟล์ให้อยู่ในสถานะ Unmodified แต่ก็เป็นการสร้าง snapshot ให้กับ repository ทำให้สามารถดูได้ว่าเราเปลียนหรือแก้ไขอะไรไปบ้าง
 
 ```
-      git remote add origin url_repository
+$  git remote add origin url_repository
 ```
 
 คำสั่งนี้ ใช้ในการเพิ่ม url ของ remote(server) เพื่อให้รู้ว่าเราจะฝากโค๊ดไว้ตาม url_repository ที่เรากำหนด
 
 ```
-      git push or git push -u origin your_branch
+$  git push or git push -u origin your_branch
 ```
 
 คำสั่งนี้ ใช้ในการส่งข้อมูล Project จากเครื่องคอมพิวเตอร์ของเรา ไปยัง Github ตาม branch ที่เรากำหนด
-### การสร้าง Branch และการใช้งาน Branch
+
+
+### การใช้การ Branching และการ Merging
+
+```
+$  git branch your_branch
+```
+
+คำสั่งนี้ จะใช้ในการสร้าง branch ขึ้นมาใหม่
+
+```
+$  git checkout your_branch
+```
+คำสั่งนี้ จะใช้ในการเปลี่ยน branch ไปยัง branch เป้าหมาย
+
+```
+$  git checkout -b your_branch
+```
+
+คำสั่งนี้ เป็นคำสั่งที่รวมการสร้างและย้ายไป track ยัง branch เป้าหมาย
+
 ### การเลือกไฟล์และซ่อนไฟล์ที่ต้องการใส่ใน Github
